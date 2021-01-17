@@ -22,9 +22,7 @@ static으로 선언된 메서드이며, new BigInteger(...) 은닉하고 있다.
 ### 장점
 
 * 이름을 가질 수 있기 때문에 메서드의 정확한 목적을 알기 쉬다
-
 * 호출 시 새로운 색체를 생성할 필요가 없다
-
 * 하위 타입 객체를 반환할 수 있다.
 
 
@@ -135,5 +133,5 @@ class Point extends Discount { }
 이와 같은 방식을 위해선 두 하위 클래스가 같은 인터페이스를 구현하거나 같은 부모클래스를 갖고있어야 한다.
 
 
-참고 문헌
+###### 참고 문헌
 https://johngrib.github.io/wiki/static-factory-method-pattern/
