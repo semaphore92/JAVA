@@ -1,4 +1,4 @@
-8. finalizer와 cleaner 사용을 피하라
+8. finalizer와 cleaner 사용을 피하라.  
 =====
 
 * 자바에서는 finalizer와 cleaner라는 두 가지의 객체 소멸자를 제공한다.  
@@ -55,7 +55,7 @@ public class Test {
   
 대안 : AutoCloseable  
 -----  
-파일이나 스레드 등 종료해야 할 자원에 AutoCloaseable을 구현하나.
+파일이나 스레드 등 종료해야 할 자원에 AutoCloaseable을 구현하나,  
 이 때 예외가 발생하면 제대로 종료되도록 try-with-resources를 사용한다.    
 
 
@@ -87,7 +87,8 @@ public static void main(String[] args) {
 
 #### 그래서 JDK1.7에는 AutoCloseable 인터페이스가 추가됐다.  
 
-```java/**
+```java
+/**
  * @author Josh Bloch
  * @since 1.7
  */
@@ -108,11 +109,11 @@ public static void main(String[] args) {
 }
 ```
 
-* 위와 같이 try(){} 형태로 사용이 가능하며 () 안에 들어올 수 있는건 AutoCloseable 구현체뿐이다. 
+* 위와 같이 try(){} 형태로 사용이 가능하며 () 안에 들어올 수 있는건 AutoCloseable 구현체뿐이다.     
  -> 이런 문법을 **try with resources** 라고 부른다. 
  
 #### 저렇게하면 무슨 이점이 있을까? 
-* 매우 직관적인 인터페이스 명칭이나 위 예제를 보고 눈치챌수도있겠지만 try catch 절이 종료되면서 자동으로 close() 메서드를 호출해준다.
+* 매우 직관적인 인터페이스 명칭이나 위 예제를 보고 눈치챌수도있겠지만  try catch 절이 종료되면서 자동으로 close() 메서드를 호출해준다.
 
 
 ##### 예제 1
