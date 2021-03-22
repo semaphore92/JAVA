@@ -1,8 +1,5 @@
 # 2. 생성자에 매개변수가 많다면 빌더를 고려하라.
 
-
-
-
 선택적 매개변수가 많다면 사용할 수 있는 방식
 -------------------------------
 
@@ -38,13 +35,13 @@ public class NutritionFacts {
 	}
 }
 ```
-위오 같은 점층적 생성자 패턴으로 인스턴스 생성 시, 원하는 생성자를 골라 호출하면 된다.
+* 위와 같은 점층적 생성자 패턴으로 인스턴스 생성 시, 원하는 생성자를 골라 호출하면 된다.
 
 ```java
 	NutritionFacts cocaCola = new NutritionFacts(240, 8 , 100, 0, 35, 27);
 ```
 
-* 매개변수의 개수가 많아지면 코드의 확장이 어렵다.
+* 매개변수의 개수가 많아지면 코드의 확장이 어렵다.    
 
 
 
@@ -76,7 +73,7 @@ public class NutritionFacts {
 
 ### 빌드 패턴
 
-점층적 생성자 패턴의 안정성과 자바빈즈 패턴의 가독성을 합친 빌드패턴은,
+점층적 생성자 패턴의 안정성과 자바빈즈 패턴의 가독성을 합친 빌드패턴은,  
 필수 매개변수로만 생성자를 호출하여 빌더 객체를 얻는다.
 
 
@@ -143,7 +140,7 @@ public class NutritionFacts {
 
 }
 ```
-NutritionFacts 클래스는 불변이며, 모든 매개변수의 기본 값들을 한곳에 모아뒀다.
+* NutritionFacts 클래스는 불변이며, 모든 매개변수의 기본 값들을 한곳에 모아뒀다.
 
 ```java
 NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8)
@@ -152,7 +149,7 @@ NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8)
                                             .carbohydrate(27).build();
 ```
 
-위와 같이 인스턴스를 생성할 수 있다.											
+* 위와 같이 인스턴스를 생성할 수 있다.											
 
 
 
