@@ -1,5 +1,5 @@
-8. finalizer와 cleaner 사용을 피하라.  
-=====
+8.finalizer와 cleaner 사용을 피하라.  
+===========
 
 * 자바에서는 finalizer와 cleaner라는 두 가지의 객체 소멸자를 제공한다.  
 
@@ -56,7 +56,7 @@ public class Test {
 대안 : AutoCloseable  
 -----  
 파일이나 스레드 등 종료해야 할 자원에 AutoCloaseable을 구현하나,  
-이 때 예외가 발생하면 제대로 종료되도록 try-with-resources를 사용한다.    
+이 때 예외가 발생하면 제대로 종료되도록 **try-with-resources**를 사용한다.    
 
 
 
